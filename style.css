@@ -63,9 +63,12 @@ nav {
   font-size: 24px;
   padding-left: 8px;
 }
+.nav-links{
+  margin-right: 24px;
+}
 
 .nav-link {
-  margin: 0 16px;
+  margin: 0 10px;
   font-weight: 600;
   text-decoration: none;
   color: #242424;
@@ -80,7 +83,7 @@ nav {
 }
 
 .nav-login {
-  margin-left: 32px;
+  margin-left: 16px;
   margin-right: 16px;
 }
 .nav-btn {
@@ -98,6 +101,7 @@ nav {
   border-radius: 50px;
   border: none;
   transition: all 200ms ease;
+  margin: 0 auto;
 }
 
 .purple-btn:hover {
@@ -105,6 +109,73 @@ nav {
   cursor: pointer;
 }
 
+/* burger menu*/
+
+.menu-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 378px;
+  padding: 16px;
+  margin: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px darkgrey solid;
+  border-radius: 15px;
+  visibility: hidden;
+  transform: translateX(300%);
+  transition: all 300ms ease;
+}
+
+.burger-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.burger-link {
+  text-decoration: none;
+  color: #242424;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.burger-menu-close {
+  position: fixed;
+  right: 32px;
+  top: 32px;
+  border: none;
+  background-color: white;
+}
+
+.x-icon {
+  font-size: 24px;
+}
+
+.burger-menu {
+  border: none;
+  background-color: white;
+  visibility: hidden;
+  position: absolute;
+  right: 24px;
+
+
+}
+
+.menu-icon {
+  font-size: 24px;
+}
+
+.menu-open .menu-container{
+visibility: visible;
+transform: translateX(0);
+}
 /* header*/
 
 .header-row {
@@ -303,7 +374,7 @@ nav {
 .pro-img-wrapper {
   display: flex;
   width: 40%;
- 
+
   border: #e1e1e1 solid 1px;
   margin-left: 50px;
 }
@@ -856,6 +927,10 @@ footer {
     display: none;
   }
 
+  .burger-menu{
+    visibility: visible;
+  }
+
   .header-row {
     flex-direction: column;
     align-items: center;
@@ -974,7 +1049,7 @@ footer {
     width: 100%;
   }
 
-  .values-para{
+  .values-para {
     text-align: center;
   }
 
@@ -996,68 +1071,68 @@ footer {
     text-align: center;
   }
 
-  .pro-btn{
+  .pro-btn {
     margin: 0 auto;
   }
 
-  .pricing-headline{
+  .pricing-headline {
     text-align: center;
   }
-  .pricing-title{
+  .pricing-title {
     font-size: 40px;
     text-align: center;
   }
-  .pricing-row{
+  .pricing-row {
     align-items: center;
   }
 
-  .plans{
+  .plans {
     flex-wrap: wrap;
     width: 70%;
     align-items: center;
     justify-content: center;
   }
 
-  .plan{
+  .plan {
     width: 70%;
   }
 
-.plan-target{
-  text-align: center;
-}
-
-  .test-para{
+  .plan-target {
     text-align: center;
   }
-  
-  .testimonials-description{
+
+  .test-para {
+    text-align: center;
+  }
+
+  .testimonials-description {
     align-items: center;
     justify-content: center;
     width: 70%;
   }
-  
-  .stars{
+
+  .stars {
     display: flex;
     justify-content: center;
   }
 
   .review-title,
-  .review-para{
+  .review-para {
     text-align: center;
   }
 
-  .profile-name{
+  .profile-name {
     font-size: 20px;
   }
 
-  .start-container{
+  .start-container {
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .start-title{
+  .start-title {
     font-size: 25px;
     text-align: center;
     width: 70%;
@@ -1065,37 +1140,39 @@ footer {
   }
 
   .start-btn,
-  .start-btn2{
+  .start-btn2 {
     width: 150px;
     margin: 0 16px;
   }
 
-  .footer-row{
+  .footer-row {
     width: 80%;
   }
 
-  .footer-links{
+  .footer-links {
     flex-wrap: wrap;
     justify-content: left;
   }
 
-  .footer-list{
+  .footer-list {
     width: 33%;
     margin-bottom: 16px;
   }
 
-  .footer-bottom{
+  .footer-bottom {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
   }
 
-  .footer-brand{
+  .footer-brand {
     margin-bottom: 16px;
   }
 
-  .copyright{
+  .copyright {
     margin-bottom: 16px;
   }
 }
+
+
